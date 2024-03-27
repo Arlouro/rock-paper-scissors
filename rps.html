@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rock Paper Scissors</title>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <script src="rps.js" defer></script>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="container"></div>
+  </body>
 </html>
-<body>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="rps.js"></script>
-
-  <h1>Rock Paper Scissors</h1>
-
-  <button id="rock">Rock</button>
-  <button id="paper">Paper</button>
-  <button id="scissors">Scissors</button>
-
-  <script>
-    document.getElementById("rock").addEventListener("click", function() {
-      let result = playGame("rock");
-    });
-
-    document.getElementById("paper").addEventListener("click", function() {
-      let result = playGame("paper");
-    });
-
-    document.getElementById("scissors").addEventListener("click", function() {
-      let result = playGame("scissors");
-    });
-  </script>
-</body>
