@@ -21,12 +21,23 @@ resultText.textContent = 'Result:';
 const result = document.createElement('p');
 result.id = 'result';
 
+const resultContainer = document.createElement('div');
+resultContainer.id = 'result-container';
+
+const resultArea = document.createElement('div');
+resultArea.id = 'result-area';
+
 container.appendChild(choose);
 container.appendChild(rockButton);
 container.appendChild(paperButton);
 container.appendChild(scissorsButton);
-container.appendChild(resultText);
-container.appendChild(result);
+
+resultContainer.appendChild(resultText);
+
+resultArea.appendChild(result);
+resultContainer.appendChild(resultArea);
+
+container.appendChild(resultContainer);
 
 rockButton.addEventListener('click', () => {
   result.textContent = playRound('Rock', getComputerChoice());
